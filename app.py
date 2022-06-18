@@ -31,8 +31,8 @@ def todos():
     con.close()
     return jsonify(dados)
 
-@app.route("/lista/<int:id>") #http://localhost:5000/lista/1
-def lista_um(id):
+@app.route("/mostra/<int:id>") #http://localhost:5000/lista/1
+def mostra_um(id):
     con = pega_conexao()
     cur = con.cursor()
 
@@ -44,5 +44,26 @@ def lista_um(id):
 
     dados = cur.fetchone()
     con.close()
+    return jsonify(dados)
+
+@app.route("/videos/<int:pagina>")
+def videos(pagina):
+    con = pega_conexao()
+    cur= con.cursor()
+
+    try:
+        quantidade = 3
+        offset = (pagina -1)* quantidade
+        cur.execute(f"SELECT * FROM Videos ORDER by id ASC LIMIT {quantidade} OFFSET {offset}")
+    except:
+        con.close()
+        return jsonify("erro ao consultar banco")
+
+    dados= cur.fetchall()
+
+    return jsonify(dados)
+
 if __name__ == "__main__":
 	app.run()
+
+    
