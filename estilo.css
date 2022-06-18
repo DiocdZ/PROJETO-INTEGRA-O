@@ -257,6 +257,18 @@ margin-top: 10px;
     padding: 8px;
 }
 
+#p1{
+    width: 500px;
+    border: 8px solid black;
+    margin: 1%;   
+}
+
+.imagem-funcao{
+    border-radius: 8%;
+    width: 400px;
+    transition: all 0.5s;
+}
+
 #img {
     width: 300px;
     border: 8px solid black;

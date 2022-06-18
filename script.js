@@ -6,7 +6,6 @@ const botao1 = document.querySelector("#botao1");
 const botao2 = document.querySelector("#botao2");
 /*const botao3 = document.querySelector("#botao3");*/
 console.log(botao1)
-console.log ("oi")
 
 const div1 = document.querySelector("#div1");
 const div2 = document.querySelector("#div2");
@@ -15,14 +14,38 @@ const div2 = document.querySelector("#div2");
 // Exibe nome e preço
 botao1.addEventListener("click", function(){ 
     botao1.style.opacity = "1"
-    fetch('http://127.0.0.1:5000/mostra/1')
+    fetch('http://127.0.0.1:5000/videos/1')
     .then(function(resposta) {
         return resposta.json()
     })
     .then(function(dados) {
-        document.querySelector("#p1").innerHTML = `${dados[1]}:  ${dados[2]} : ${dados[3]}`
+        mosta_imagens(dados)
+        //console.log(dados)
+       // document.querySelector("#p1").innerHTML = `<p>${dados[1]}</p>: <link> ${dados[2]}</link> :<img src="${dados[3]}">`
       })
 });
+
+function mosta_imagens(dados){
+  
+//dados.forEach(element => { 
+//    document.querySelector("#p1").appendChild(`<p>${element[1]}</p>: 
+ //   <link> ${element[2]}</link> :<img src="${element[3]}">`)
+   // console.log(element)
+//});
+
+dados.forEach(elemento => {
+    let img = document.createElement("img")
+    img.src = `${elemento[3]}`
+
+
+    let titulo = document.createElement("h3")
+    let text = document.createTextNode(`${elemento[1]}`)
+    titulo.appendChild(text)
+    
+    document.getElementById("p1").appendChild(titulo);
+    document.getElementById("p1").appendChild(img);
+   
+})
 
 botao2.addEventListener("click", function(){ 
     botao2.style.opacity = "1"
@@ -34,7 +57,7 @@ botao2.addEventListener("click", function(){
         document.querySelector("#p2").innerHTML = `${dados[1]}: R$ ${dados[2]}`
       })
 });
-
+}
 //botao3.addEventListener("click", function(){*/
 /*    botao3.style.opacity = "1"
     fetch('http://127.0.0.1:5000/lista/3')
