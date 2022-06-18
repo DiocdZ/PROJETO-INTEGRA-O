@@ -31,7 +31,7 @@ def todos():
     con.close()
     return jsonify(dados)
 
-@app.route("/mostra/<int:id>") #http://localhost:5000/lista/1
+@app.route("/mostra/<int:id>") #http://localhost:5000/mostra/1
 def mostra_um(id):
     con = pega_conexao()
     cur = con.cursor()
@@ -44,7 +44,10 @@ def mostra_um(id):
 
     dados = cur.fetchone()
     con.close()
-    return jsonify(dados)
+    banco = jsonify(dados)
+    print(dados)
+    print(banco)
+    return banco
 
 @app.route("/videos/<int:pagina>")
 def videos(pagina):
