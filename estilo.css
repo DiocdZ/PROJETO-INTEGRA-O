@@ -168,10 +168,10 @@
 
 /*botão cv*/
 
-.conteudo-principal-escrito-botao-cv{
+.conteudo-principal-escrito-botao-cv{   
     background: gray;
-    width: 270px;
-    height: 170px;
+    width: 240px;
+    height: 120px;
     color: rgb(249, 249, 249);
     box-shadow: 4px 5px 4px #0f0d00;
     border:solid 1px gray;
@@ -404,4 +404,11 @@ margin-top: 10px;
     position: relative;
     padding-top: 3%;
     left:21%
+}
+
+.grid1{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    max-width: 200px;
+    margin: 0 auto;
 }
