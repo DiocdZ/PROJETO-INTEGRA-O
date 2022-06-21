@@ -420,8 +420,26 @@ margin-top: 10px;
 }
 
 .grid1{
+}
+
+#p1 {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    max-width: 200px;
-    margin: 0 auto;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#p1 div a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#p1 div h3 {
+    text-align: center;
+}
+
+#p1 div a img {
+    width: 80%;
 }
