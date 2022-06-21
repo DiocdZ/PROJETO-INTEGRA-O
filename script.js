@@ -54,10 +54,13 @@ window.addEventListener('load', function () {
             
             let titulo = document.createElement("h3")
             let text = document.createTextNode(`${elemento[1]}`)
-            titulo.appendChild(text)
+            titulo.appendChild(text);
 
-            document.getElementById("p1").appendChild(titulo);
-            document.getElementById("p1").appendChild(imgemComLink);
+            const div = document.createElement('div');
+            div.appendChild(titulo);
+            div.appendChild(imgemComLink);
+
+            document.getElementById("p1").appendChild(div);
 
         })
 
