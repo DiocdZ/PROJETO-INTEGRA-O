@@ -17,6 +17,7 @@
     flex-wrap:wrap ;
     justify-content: center;
     align-content: center;
+    
 }
 
 /*Barra de navegação*/
@@ -26,51 +27,45 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    padding: 30px;
+    padding: 10px;
     background-color: rgb(249, 248, 244);
-
 }
 
 
 .barra-de-navegacao-menu{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    font-size: 30px;
+    font-size: 40px;
     position: relative;
-    left:12%;
+
     
 }
 
 .barra-de-navegacao-menu-item {
     font-family: 'Courier New', Courier, monospace;
     font-weight: 200;
-    font-size: 35px;
+    font-size: 45px;
     align-items: center;
     text-decoration: underline;
     color: #fcfcfc;
+    
 }
-
-#nome-barra-de-nav{  
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 70px;
-    color: #faf6f6;
-    padding: 1%;
-    height: 2%;
-    position: relative;
-    left: 13%;
-}   
 
 #menu-nav ul{
     list-style: none;
     padding: 0%;
     background-color: rgb(243, 242, 240);
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    
 }
 
 #menu-nav ul li{
     display: inline;
+    
 }
 
 #menu-nav ul li a{
@@ -79,6 +74,7 @@
     display: inline-block;
     padding: 20px;
     transition: background .4s;
+    
 }
 
 #menu-nav ul li a:hover{
@@ -103,6 +99,7 @@
 .conteudo {
     border-top:2px solid rgb(0, 0, 0) ;
     margin-bottom: 80px solid rgb(0,0,0);
+    
   }
 .conteudo-principal{
     display: flex;
@@ -110,8 +107,17 @@
     flex-direction: row;
     justify-content: space-around;
     border-bottom: 50px;
+    align-items: flex-start;
 }
 
+.conteudo-principal-2{
+    display: flex;
+    padding-top: 35px;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 50px;
+    align-items: center;
+}
 .conteudo-principal-pagina-tres{
     display: flex;
     align-items: center;
@@ -163,7 +169,7 @@
     color: #040000;
     font-size: 25px;
     font-family: 'Courier New', Courier, monospace;
-    
+    align-items: center;
 }
 
 /*botão cv*/
@@ -214,7 +220,6 @@ flex-direction: row;
 align-items: center;
 gap: 30 px;
 margin-top: 10px;
-
 
 }
 
