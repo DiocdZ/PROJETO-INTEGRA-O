@@ -172,6 +172,12 @@
     align-items: center;
 }
 
+.conteudo-cerreira p{
+    line-height: 25px;
+    margin-top: 30px;
+
+}
+
 /*botão cv*/
 
 .conteudo-principal-escrito-botao-cv{   
